@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         TextView btnHistory = findViewById(R.id.btnHistory);
         btnHistory.setOnClickListener(new View.OnClickListener() {
             @Override

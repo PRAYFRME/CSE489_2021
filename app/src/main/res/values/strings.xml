@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Event Management</string>
+    <string name="hello_world_text">Event Management Text</string>
+</resources>

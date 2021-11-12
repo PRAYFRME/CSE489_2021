@@ -16,7 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.println(MainActivity.globalCounter+" @MainActivity-onCreate()");
-        MainActivity.globalCounter++;
+        //MainActivity.globalCounter++;
+
+        String value = Util.getInstance().getValueByKey(this,"Department Meeting");
+
 
         TextView btnCreateNew = findViewById(R.id.btnCreateNew);
         btnCreateNew.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println(MainActivity.globalCounter+" @MainActivity-History button was pressed");
                 MainActivity.globalCounter++;
+
+                String[] values = value.split("_____");
+
+                System.out.println("Name : "+values[0]);
+                System.out.println("Place : "+values[1]);
+                System.out.println("Event Type :"+values[2]);
+                System.out.println("Date & Time :"+values[3]);
+                System.out.println("Capacity  :"+values[4]);
+                System.out.println("Budget :"+values[5]);
+                System.out.println("Email :"+values[6]);
+                System.out.println("Phone :"+values[7]);
+                System.out.println("Description :"+values[8]);
+
             }
         });
 
@@ -47,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     @Override

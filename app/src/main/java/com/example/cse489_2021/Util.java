@@ -1,6 +1,8 @@
 package com.example.cse489_2021;
 
 import android.content.Context;
+import android.view.View;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -62,7 +64,7 @@ public class Util {
 		} catch (Exception e) {}
 	}
 
-	public String getValueByKey(Context context, String key) {
+	public String getValueByKey(MainActivity context, String key) {
 		KeyValueDB db = new KeyValueDB(context);
 		String value = db.getValueByKey(key);
 		db.close();
